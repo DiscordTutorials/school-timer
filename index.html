@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Countdown Cyprus 🏫</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fredoka+One:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="gradient-bg">
+        <div class="noise"></div>
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">🏫 School Timer</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#prediction" class="nav-link">Prediction</a></li>
+                <li><a href="#games" class="nav-link">Games</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="title-main">School Starts In</span>
+                    <span class="title-sub">(for Cyprus)</span>
+                </h1>
+                
+                <div class="countdown-container">
+                    <div class="countdown-grid">
+                        <div class="countdown-item">
+                            <div class="countdown-number" id="days">--</div>
+                            <div class="countdown-label">Days</div>
+                        </div>
+                        <div class="countdown-item">
+                            <div class="countdown-number" id="hours">--</div>
+                            <div class="countdown-label">Hours</div>
+                        </div>
+                        <div class="countdown-item">
+                            <div class="countdown-number" id="minutes">--</div>
+                            <div class="countdown-label">Minutes</div>
+                        </div>
+                        <div class="countdown-item">
+                            <div class="countdown-number" id="seconds">--</div>
+                            <div class="countdown-label">Seconds</div>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="target-date">
+                    🎯 Target: September 5, 2025 at 7:30 AM (GMT+3)
+                </p>
+            </div>
+        </section>
+
+        <section id="about" class="section hidden">
+            <div class="section-content">
+                <h2>About This Timer</h2>
+                <div class="card">
+                    <p>This countdown is specifically designed for students and parents in Cyprus! 🇨🇾</p>
+                    <p>We've set the countdown to September 5th, 2025 at 7:30 AM local time (GMT+3), which aligns with the typical school start time across Cypriot schools.</p>
+                    <p>Whether you're dreading the end of summer or excited to get back to learning, this timer will keep you informed!</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="prediction" class="section hidden">
+            <div class="section-content">
+                <h2>Current Prediction</h2>
+                <div class="card">
+                    <p>🔮 Based on patterns and official announcements:</p>
+                    <ul>
+                        <li>The 5th is a Friday - last year school started on Friday 6th</li>
+                        <li>Schools in Cyprus don't like starting on a Monday</li>
+                        <li>Cypriot schools usually open in early September</li>
+                    </ul>
+                    <p class="note">📢 Note: The official school start date hasn't been released yet! This prediction is based on typical school opening patterns. Students will be notified of the exact date by their respective schools.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="games" class="section hidden">
+            <div class="section-content">
+                <h2>🎮 Games</h2>
+                <p>Yo guys! It's me, the creator of the page. Hope you guys like this website as much as I do. Anyways if you're bored, here's some games to play!</p>
+                
+                <div class="games-container">
+                    <div class="game-card">
+                        <h3>🐍 Snake Game</h3>
+                        <canvas id="snakeGame" width="300" height="300"></canvas>
+                        <button onclick="startSnake()">Start Snake</button>
+                        <small style="color:#ccc;margin-top:0.5rem;display:block;">Use WASD to move. Sorry! Still developing this for mobile..</small>
+                    </div>
+                    
+                    <div class="game-card">
+                        <h3>👆 Click Counter</h3>
+                        <div class="click-game">
+                            <p id="clickCount">0 clicks</p>
+                            <p id="cps">0.0 CPS</p>
+                            <button id="clickButton" onclick="incrementClick(event)">Click Me!</button>
+                            <button onclick="resetClick()">Reset</button>
+                        </div>
+                    </div>
+                    
+                    <div class="game-card">
+                        <h3>⚡ Reaction Time</h3>
+                        <div class="reaction-game">
+                            <div id="reactionBox" class="reaction-box">Click when green!</div>
+                            <p id="reactionTime">Time: --</p>
+                            <button onclick="startReaction()">Start</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Made with ❤️ by Ducky Duck</p>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
